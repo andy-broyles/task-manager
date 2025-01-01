@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
+  "homepage": "https://andy-broyles.github.io/task-manager",
   "description": "Task Manager Frontend",
   "main": "index.js",
   "scripts": {
