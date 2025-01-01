@@ -1,0 +1,206 @@
+/* General Page Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #121212, #1a1a1a);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 20px;
+}
+
+ul {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    list-style-type: none; /* Remove bullet points */
+}
+
+li {
+    margin: 0; /* Remove extra spacing */
+    padding: 0; /* Remove extra padding */
+}
+
+
+/* Header */
+h1 {
+    color: #40c4ff;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    width: 90%;
+    align-items: center; /* Align vertically */
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 20px; /* Spacing below input area */
+    margin-left: auto;
+    margin-right: auto; /* Center horizontally */
+}
+
+/* Input Field */
+.input-container input {
+    flex: 1; /* Take available space */
+    padding: 12px 15px;
+    border: 2px solid #40c4ff;
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px;
+    background-color: #2e2e2e;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 185, 255, 0.5); /* Subtle glow effect */
+}
+
+.input-container input:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 12px rgba(0, 185, 255, 0.8); /* Glow when focused */
+}
+
+/* Button */
+.input-container button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    background: linear-gradient(to right, #40c4ff, #00bfff);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.input-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Hover animation */
+}
+
+/* Task Styles */
+.task {
+    display: flex;
+    align-items: center;
+    width: 88%;
+    margin: auto; /* Center horizontally */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #2e2e2e;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    gap: 10px; /* Ensure spacing between task elements */
+}
+
+.task:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* Completed Tasks */
+.task.completed {
+    text-decoration: line-through;
+    color: #888;
+    background: #3a3a3a;
+}
+
+/* Child Tasks */
+.task-child {
+    margin-left: 20px; /* Smaller indent for child tasks */
+    margin-bottom: 10px;
+    padding: 10px; /* Consistent padding */
+    border-left: 3px solid #40c4ff;
+    border-radius: 8px;
+    background: #2e2e2e; /* Match parent task background */
+    width: calc(100% - 20px); /* Adjust width to fit inside parent task */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+
+/* Task Buttons */
+.task-buttons {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Ensure spacing between buttons */
+}
+
+.delete-btn,
+.add-child-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: linear-gradient(to right, #ff4d4d, #ff0000);
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #ff0000;
+}
+
+/* Add Child Button */
+.add-child-btn {
+    background: linear-gradient(to right, #40c4ff, #00bfff);
+    color: white;
+}
+
+.add-child-btn:hover {
+    background: #00bfff;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #40c4ff;
+    border-radius: 3px;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background: #40c4ff;
+}
+
+input[type="checkbox"]:checked:after {
+    content: '\2714';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .task {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-buttons {
+        margin-top: 10px;
+        margin-left: 0;
+        align-self: flex-end;
+    }
+
+    input[type="text"], .add-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .add-btn {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
