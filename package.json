@@ -1,15 +1,12 @@
 {
-  "name": "task-manager",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000T\u0000a\u0000s\u0000k\u0000 \u0000M\u0000a\u0000n\u0000a\u0000g\u0000a\u0000e\u0000r\u0000 \u0000A\u0000p\u0000p\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "Task Manager Backend",
+  "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "better-sqlite3": "^11.7.0",
     "cors": "^2.8.5",
@@ -17,5 +14,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
